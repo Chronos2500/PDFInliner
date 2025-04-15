@@ -1,0 +1,17 @@
+{
+    "name": "PDFInliner",
+    "description": "すべてのPDFをインラインで表示する拡張機能",
+    "version": "1.0",
+    "manifest_version": 3,
+  
+    "declarative_net_request":{
+      "rule_resources":[{
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }]
+    },
+    
+    "host_permissions": ["<all_urls>"],
+    "permissions": ["declarativeNetRequest","declarativeNetRequestFeedback"]
+  }
