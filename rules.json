@@ -6,12 +6,12 @@
         "type": "modifyHeaders",
         "responseHeaders": [
           {
-            "header": "Content-Disposition",
+            "header": "content-disposition",
             "operation": "set",
             "value": "inline"
           },
           {
-            "header": "Content-Type",
+            "header": "content-type",
             "operation": "set",
             "value": "application/pdf"
           }
