@@ -6,12 +6,28 @@
         "type": "modifyHeaders",
         "responseHeaders": [
           {
-            "header": "content-disposition",
+            "header": "Content-Disposition",
             "operation": "set",
             "value": "inline"
-          },
+          }
+        ]
+      },
+      "condition": {
+        "regexFilter": ".*\\.pdf([?#&].*)?$",
+        "resourceTypes": [
+          "main_frame",
+          "sub_frame"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "priority": 1,
+      "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
           {
-            "header": "content-type",
+            "header": "Content-Type",
             "operation": "set",
             "value": "application/pdf"
           }
@@ -22,7 +38,8 @@
         "resourceTypes": [
           "main_frame",
           "sub_frame"
-        ]
+        ],
+        "excludedDomains": ["e-learning.u-gakugei.ac.jp"]
       }
     }
 ]
