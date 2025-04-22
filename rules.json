@@ -6,14 +6,13 @@
         "type": "modifyHeaders",
         "responseHeaders": [
           {
-            "header": "Content-Disposition",
-            "operation": "set",
-            "value": "inline"
+            "header": "content-disposition",
+            "operation": "remove"
           }
         ]
       },
       "condition": {
-        "regexFilter": ".*\\.pdf([?#&].*)?$",
+        "regexFilter": ".*",
         "resourceTypes": [
           "main_frame",
           "sub_frame"
@@ -27,7 +26,7 @@
         "type": "modifyHeaders",
         "responseHeaders": [
           {
-            "header": "Content-Type",
+            "header": "content-type",
             "operation": "set",
             "value": "application/pdf"
           }
