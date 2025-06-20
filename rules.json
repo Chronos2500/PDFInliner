@@ -39,7 +39,7 @@
           "main_frame",
           "sub_frame"
         ],
-        "excludedDomains": ["e-learning.u-gakugei.ac.jp"]
+        "excludedInitiatorDomains": ["e-learning.u-gakugei.ac.jp"]
       }
     }
 ]
