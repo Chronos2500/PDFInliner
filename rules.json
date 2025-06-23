@@ -41,5 +41,48 @@
         ],
         "excludedInitiatorDomains": ["e-learning.u-gakugei.ac.jp"]
       }
+    },
+    {
+      "id": 3,
+      "priority": 1,
+      "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
+          {
+            "header": "content-disposition",
+            "operation": "set",
+            "value": "inline"
+          }
+        ]
+      },
+      "condition": {
+        "urlFilter" : "ip_mods.php/contents/download_file_answer",
+        "resourceTypes": [
+          "main_frame",
+          "sub_frame"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "priority": 1,
+      "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
+          {
+            "header": "content-type",
+            "operation": "set",
+            "value": "application/pdf"
+          }
+        ]
+      },
+      "condition": {
+        "urlFilter" : "ip_mods.php/contents/download_file_answer",
+        "resourceTypes": [
+          "main_frame",
+          "sub_frame"
+        ],
+        "excludedInitiatorDomains": ["e-learning.u-gakugei.ac.jp"]
+      }
     }
 ]
