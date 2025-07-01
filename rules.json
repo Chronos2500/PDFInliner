@@ -1,0 +1,78 @@
+[
+    {
+      "id": 1,
+      "priority": 100,
+      "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
+          {
+            "header": "content-type",
+            "operation": "set",
+            "value": "application/pdf"
+          },
+          {
+            "header": "content-disposition",
+            "operation": "set",
+            "value": "inline"
+          }
+        ]
+      },
+      "condition": {
+        "urlFilter": "*",
+        "resourceTypes": [
+          "main_frame"
+        ],
+        "responseHeaders": [
+          {
+            "header": "content-disposition",
+            "values": ["*.pdf*","*%2Epdf*","*LnBkZg==*","*5wZGY=*","*ucGRm*"]
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "priority": 10,
+      "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
+          {
+            "header": "content-disposition",
+            "operation": "set",
+            "value": "inline"
+          }
+        ]
+      },
+      "condition": {
+        "urlFilter": "*",
+        "resourceTypes": [
+          "main_frame"
+        ],
+        "responseHeaders": [
+          {
+            "header": "content-type",
+            "values": ["application/pdf*"]
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "priority": 1,
+      "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
+          {
+            "header": "content-disposition",
+            "operation": "remove"
+          }
+        ]
+      },
+      "condition": {
+        "urlFilter": "*",
+        "resourceTypes": [
+          "main_frame"
+        ]
+      }
+    }
+]
